@@ -1,0 +1,51 @@
+{
+  "com": {
+    "example1": {
+      "person": {
+        "gender": {
+          "en_US": "Gender",
+          "ja_JP": "性別",
+          "man": {
+            "en_US": "Man",
+            "ja_JP": "男"
+          },
+          "woman": {
+            "en_US": "Woman",
+            "ja_JP": "女"
+          }
+        }
+      }
+    },
+    "example2": {
+      "universal": {
+        "yes": {
+          "default": "Yes",
+          "ja_JP": "はい"
+        },
+        "no": {
+          "default": "No",
+          "ja_JP": "いいえ"
+        },
+        "ok": {
+          "default": "OK"
+        }
+      },
+      "alert": {
+        "title": {
+          "confirm": {
+            "ja_JP": "確認"
+          },
+          "error": {
+            "ja_JP": "エラー"
+          }
+        },
+        "message": {
+          "error": {
+            "en_US": "error happened:$1",
+            "ja_JP": "エラーが発生しました:$1"
+          }
+        }
+      }
+    }
+  }
+}
