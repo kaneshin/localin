@@ -19,15 +19,15 @@
     "example2": {
       "universal": {
         "yes": {
-          "default": "Yes",
+          "en_US": "Yes",
           "ja_JP": "はい"
         },
         "no": {
-          "default": "No",
+          "en_US": "No",
           "ja_JP": "いいえ"
         },
         "ok": {
-          "default": "OK"
+          "en_US": "OK"
         }
       },
       "alert": {
