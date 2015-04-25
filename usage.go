@@ -13,9 +13,11 @@ const usageText = `localin
 
   Commands:
     gen
+    out
     lint
 
   Examples:
+    localin out foo.json bar.json -d localized -f ios android
     localin gen foo.json bar.json -d localized -f ios android
 
   General Options:
