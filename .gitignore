@@ -1,3 +1,6 @@
+*.xml
+*.plist
+
 # system
 .DS_Store
 .DS_Store?

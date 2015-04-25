@@ -8,6 +8,7 @@ import (
 type command struct {
 	usage string
 	run   func([]string) error
+	// options map[string]func(interface{})
 }
 
 func (c *command) name() string {

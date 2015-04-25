@@ -6,6 +6,11 @@
 go get github.com/kaneshin/localin
 ```
 
+## Support
+
+- iOS (Plist)
+- Android (XML)
+
 ## Usage
 
 ### Generate
@@ -13,11 +18,31 @@ go get github.com/kaneshin/localin
 Generate localized files.
 
 ```
-localin gen foo.json bar.json -d localized -f ios android
+localin gen foo.json bar.json --target ios --delimiter _ --base en_US --lang en_US
 ```
 
-- `-d`: destination
-- `-f`: format
+- `--target`: Choose supported OS.
+    - ios
+    - android
+- `--delimiter`: Default `_`.
+- `--base`:
+- `--lang`:
+
+### Output
+
+Output localized files.
+
+```
+localin out foo.json bar.json --target ios --delimiter _ --base en_US --lang en_US
+```
+
+- `--target`: Choose supported OS.
+    - ios
+    - android
+- `--delimiter`: Default `_`.
+- `--base`:
+- `--lang`:
+
 
 ### Lint
 

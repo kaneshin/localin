@@ -8,6 +8,7 @@ import (
 )
 
 var commands = []*command{
+	cmdOut,
 	cmdGen,
 	cmdHelp,
 }
