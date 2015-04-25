@@ -5,8 +5,7 @@ import (
 	"os"
 )
 
-func usage() {
-	fmt.Printf(`localin
+const usageText = `localin
 
   Usage:
     localin -h/--help
@@ -20,6 +19,9 @@ func usage() {
     localin gen foo.json bar.json -d localized -f ios android
 
   General Options:
-`)
-	os.Exit(0)
+`
+
+func usage() {
+	fmt.Printf(usageText)
+	os.Exit(1)
 }

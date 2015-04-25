@@ -9,6 +9,7 @@ import (
 
 var commands = []*command{
 	cmdGen,
+	cmdHelp,
 }
 
 func run(args []string) ([]byte, error) {
@@ -19,11 +20,6 @@ func run(args []string) ([]byte, error) {
 	return cmd.Output()
 }
 
-func perror(err ...interface{}) {
-	fmt.Fprintln(stderr, "ERROR: ", err)
-	os.Exit(1)
-}
-
 func main() {
 	flag.Usage = usage
 	flag.Parse()
@@ -31,19 +27,16 @@ func main() {
 		usage()
 	}
 
-	name := flag.Arg(0)
-
-	if name == "--help" || name == "-h" {
-		usage()
-	}
-
+	commandName := flag.Arg(0)
 	for _, cmd := range commands {
-		if cmd.name() == name {
+		if cmd.name() == commandName {
 			if err := cmd.run(flag.Args()[1:]); err != nil {
-				perror(err)
+				fmt.Fprintln(stderr, "ERROR: ", err)
+				os.Exit(1)
 			}
 			os.Exit(0)
 		}
 	}
-	perror("Unknown command ", name)
+	fmt.Fprintln(stderr, "ERROR: Unknown command ", commandName)
+	os.Exit(1)
 }
