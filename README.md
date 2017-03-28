@@ -2,8 +2,8 @@
 
 ## Installation
 
-```
-go get github.com/kaneshin/localin
+```shell
+$ go get github.com/kaneshin/localin/cmd/localin
 ```
 
 ## Support
@@ -17,8 +17,8 @@ go get github.com/kaneshin/localin
 
 Generate localized files.
 
-```
-localin gen foo.json bar.json --target ios --delimiter _ --base en_US --lang en_US
+```shell
+$ localin gen foo.json bar.json --target ios --delimiter _ --base en_US --lang en_US
 ```
 
 - `--target`: Choose supported OS.
@@ -32,8 +32,8 @@ localin gen foo.json bar.json --target ios --delimiter _ --base en_US --lang en_
 
 Output localized files.
 
-```
-localin out foo.json bar.json --target ios --delimiter _ --base en_US --lang en_US
+```shell
+$ localin out foo.json bar.json --target ios --delimiter _ --base en_US --lang en_US
 ```
 
 - `--target`: Choose supported OS.
